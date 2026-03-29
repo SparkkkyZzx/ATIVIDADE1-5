@@ -1,24 +1,17 @@
-//att 4
+//att 5
+//a vantagem do construtor é pode r criar o objeto já com os atributos definidos, sem precisar usar os métodos set para cada atributo, tornando o código mais limpo e eficiente. Além disso, o construtor garante que o objeto seja criado em um estado válido, evitando a possibilidade de esquecer de definir algum atributo importante.
 
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+
         ArrayList<carro> listaDeCarros = new ArrayList<>();
-        carro meuCarro = new carro();
-        meuCarro.setMarca("Chevrolet");
-        meuCarro.setModelo("Chevetão");
-        meuCarro.setAno(1973);
 
-        carro outroCarro = new carro();
-        outroCarro.setMarca("Volkswagen");
-        outroCarro.setModelo("Fuscão");
-        outroCarro.setAno(1938);
 
-        carro terceiroCarro = new carro();
-        terceiroCarro.setMarca("Ford");
-        terceiroCarro.setModelo("Mustang");
-        terceiroCarro.setAno(1965);
+        carro meuCarro = new carro("Chevrolet", "Chevetão", 1973);
+        carro outroCarro = new carro("Volkswagen", "Fuscão", 1938);
+        carro terceiroCarro = new carro("Ford", "Mustang", 1965);
 
         listaDeCarros.add(meuCarro);
         listaDeCarros.add(outroCarro);
@@ -36,6 +29,4 @@ public class Main {
         System.out.println("Idade do outro carro: " + idade2 + " anos");
         System.out.println("Idade do terceiro carro: " + idade3 + " anos");
     }
-
-
 }
