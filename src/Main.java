@@ -1,26 +1,41 @@
+//att 4
+
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
+        ArrayList<carro> listaDeCarros = new ArrayList<>();
         carro meuCarro = new carro();
-        meuCarro.marca = "chevrolet";
-        meuCarro.modelo = "Chevetão";
-        meuCarro.ano = 1973;
+        meuCarro.setMarca("Chevrolet");
+        meuCarro.setModelo("Chevetão");
+        meuCarro.setAno(1973);
 
         carro outroCarro = new carro();
-        outroCarro.marca = "wolkswagen";
-        outroCarro.modelo = "Fuscão";
-        outroCarro.ano = 1938;
+        outroCarro.setMarca("Volkswagen");
+        outroCarro.setModelo("Fuscão");
+        outroCarro.setAno(1938);
 
+        carro terceiroCarro = new carro();
+        terceiroCarro.setMarca("Ford");
+        terceiroCarro.setModelo("Mustang");
+        terceiroCarro.setAno(1965);
 
-        System.out.println("Marca: " + meuCarro.marca);
-        System.out.println("Modelo: " + meuCarro.modelo);
-        System.out.println("Ano: " + meuCarro.ano);
+        listaDeCarros.add(meuCarro);
+        listaDeCarros.add(outroCarro);
+        listaDeCarros.add(terceiroCarro);
 
+        for (carro c : listaDeCarros) {
+            c.exibir();
+        }
 
-        System.out.println("Marca: " + outroCarro.marca);
-        System.out.println("Modelo: " + outroCarro.modelo);
-        System.out.println("Ano: " + outroCarro.ano);
+        int idade1 = meuCarro.idadeDocarro();
+        int idade2 = outroCarro.idadeDocarro();
+        int idade3 = terceiroCarro.idadeDocarro();
+
+        System.out.println("Idade do meu carro: " + idade1 + " anos");
+        System.out.println("Idade do outro carro: " + idade2 + " anos");
+        System.out.println("Idade do terceiro carro: " + idade3 + " anos");
     }
+
+
 }
-
-
-
