@@ -1,27 +1,42 @@
-//ATIVIDADE 2
+//ATT 3
+
+
+import java.util.ArrayList;
+
+
+
+
 public class Main {
     public static void main(String[] args) {
-        carro meuCarro = new carro();
-        meuCarro.marca = "chevrolet";
-        meuCarro.modelo = "Chevetão";
-        meuCarro.ano = 1973;
 
 
-        carro outroCarro = new carro();
-        outroCarro.marca = "wolkswagen";
-        outroCarro.modelo = "Fuscão";
-        outroCarro.ano = 1938;
+        ArrayList<carro> listaCarros = new ArrayList<>();
+        carro carro1 = new carro();
+        carro1.marca = "chevrolet";
+        carro1.modelo = "Chevetão";
+        carro1.ano = 1973;
 
 
-        // Chamando método que só executa ação
-        meuCarro.exibir();
-        outroCarro.exibir();
+        carro carro2 = new carro();
+        carro2.marca = "wolkswagen";
+        carro2.modelo = "Fuscão";
+        carro2.ano = 1938;
 
 
-        // Chamando método que retorna valor
-        System.out.println("Idade do meu carro: " + meuCarro.idadeDoCarro());
-        System.out.println("Idade do outro carro: " + outroCarro.idadeDoCarro());
+        carro carro3 = new carro();
+        carro3.marca = "ford";
+        carro3.modelo = "Mustang";
+        carro3.ano = 2020;
+
+
+        listaCarros.add(carro1);
+        listaCarros.add(carro2);
+        listaCarros.add(carro3);
+
+
+        for (carro c : listaCarros) {
+            c.exibir();
+            System.out.println("-------------------");
+        }
     }
-
-
 }

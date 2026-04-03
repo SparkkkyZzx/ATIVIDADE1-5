@@ -4,7 +4,8 @@ public class carro {
     int ano;
 
 
-    // a) Método que apenas executa uma ação (não retorna valor)
+
+
     void exibir() {
         System.out.println("Marca: " + marca);
         System.out.println("Modelo: " + modelo);
@@ -12,7 +13,6 @@ public class carro {
     }
 
 
-    // b) Método que devolve um valor
     int idadeDoCarro() {
         return 2026 - ano;
     }
