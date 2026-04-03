@@ -1,32 +1,27 @@
-//att 5
-//a vantagem do construtor é pode r criar o objeto já com os atributos definidos, sem precisar usar os métodos set para cada atributo, tornando o código mais limpo e eficiente. Além disso, o construtor garante que o objeto seja criado em um estado válido, evitando a possibilidade de esquecer de definir algum atributo importante.
-
-import java.util.ArrayList;
-
+//ATIVIDADE 2
 public class Main {
     public static void main(String[] args) {
+        carro meuCarro = new carro();
+        meuCarro.marca = "chevrolet";
+        meuCarro.modelo = "Chevetão";
+        meuCarro.ano = 1973;
 
-        ArrayList<carro> listaDeCarros = new ArrayList<>();
+
+        carro outroCarro = new carro();
+        outroCarro.marca = "wolkswagen";
+        outroCarro.modelo = "Fuscão";
+        outroCarro.ano = 1938;
 
 
-        carro meuCarro = new carro("Chevrolet", "Chevetão", 1973);
-        carro outroCarro = new carro("Volkswagen", "Fuscão", 1938);
-        carro terceiroCarro = new carro("Ford", "Mustang", 1965);
+        // Chamando método que só executa ação
+        meuCarro.exibir();
+        outroCarro.exibir();
 
-        listaDeCarros.add(meuCarro);
-        listaDeCarros.add(outroCarro);
-        listaDeCarros.add(terceiroCarro);
 
-        for (carro c : listaDeCarros) {
-            c.exibir();
-        }
-
-        int idade1 = meuCarro.idadeDocarro();
-        int idade2 = outroCarro.idadeDocarro();
-        int idade3 = terceiroCarro.idadeDocarro();
-
-        System.out.println("Idade do meu carro: " + idade1 + " anos");
-        System.out.println("Idade do outro carro: " + idade2 + " anos");
-        System.out.println("Idade do terceiro carro: " + idade3 + " anos");
+        // Chamando método que retorna valor
+        System.out.println("Idade do meu carro: " + meuCarro.idadeDoCarro());
+        System.out.println("Idade do outro carro: " + outroCarro.idadeDoCarro());
     }
+
+
 }
