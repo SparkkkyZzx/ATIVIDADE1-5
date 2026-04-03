@@ -9,14 +9,7 @@ public class carro {
     public carro(String marca, String modelo, int ano) {
         this.marca = marca;
         this.modelo = modelo;
-
-        if (ano < 1886 || ano > 2026) {
-            System.out.println("Ano inválido!");
-            this.ano = 0;
-        } else {
-            this.ano = ano;
-        }
-
+        this.ano = ano;
         totalCarros++;
     }
 
@@ -24,18 +17,13 @@ public class carro {
         this.marca = "Desconhecido";
         this.modelo = "Desconhecido";
         this.ano = 0;
-
-        totalCarros++; // incrementa contador
+        totalCarros++;
     }
 
-    public int idadeDoCarro() {
-        return 2026 - ano;
-    }
+    public static void imprimirTotal() {
+        System.out.println("Total de carros: " + totalCarros);
 
-    public void exibir() {
-        System.out.println("Marca: " + marca);
-        System.out.println("Modelo: " + modelo);
-        System.out.println("Ano: " + ano);
-        System.out.println("--------------------------");
+        // tentativa de acessar atributo de instância
+        // ERRO!
     }
 }
