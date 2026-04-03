@@ -4,6 +4,8 @@ public class carro {
     private String modelo;
     private int ano;
 
+    public static int totalCarros = 0;
+
     public carro(String marca, String modelo, int ano) {
         this.marca = marca;
         this.modelo = modelo;
@@ -14,12 +16,16 @@ public class carro {
         } else {
             this.ano = ano;
         }
+
+        totalCarros++;
     }
 
     public carro() {
         this.marca = "Desconhecido";
         this.modelo = "Desconhecido";
         this.ano = 0;
+
+        totalCarros++; // incrementa contador
     }
 
     public int idadeDoCarro() {
