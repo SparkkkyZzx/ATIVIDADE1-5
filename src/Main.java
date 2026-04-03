@@ -1,17 +1,15 @@
 public class Main {
     public static void main(String[] args) {
-        int x = 10;
+        carro c1 = new carro("Fiat", "Uno", 2020);
+        carro c2 = c1;
+        c2.setModelo("Palio");
+        System.out.println(c1.getModelo());
+        System.out.println(c2.getModelo());
 
-        if (x > 5) {
-            int y = 20;
-            System.out.println("x dentro do if: " + x);
-            System.out.println("y dentro do if: " + y);
-        }
-
-        System.out.println("x fora do if: " + x);
-        // System.out.println(y);
     }
 }
-// Alterar b não muda a, porque tipos primitivos são passados por valor.
-// Isso significa que b recebe uma cópia do valor de a.
-// Quando b muda, apenas essa cópia muda, e o valor original de a fica a msm coisa .
+//a) palio e palio
+//b) Alterar c2 mudou c1 porque ambos apontam para o mesmo objeto na memória.
+//// c1 e c2 não são objetos diferentes, eles são referências para o mesmo objeto.
+//// Portanto, qualquer alteração feita por uma referência afeta o mesmo objeto.
+//Nao entendi a letra c
