@@ -1,12 +1,17 @@
-public static void main(String[] args) {
-    int x;
-    if (true) {
-        x = 10;
-    }
-    System.out.println(x);
-}
+public class Main {
+    public static void main(String[] args) {
+        int x = 10;
 
-// Escopo é a região do código que a variável pode ser acessada.
-// A variável "x" foi criada dentro do bloco if, então só existe dentro dele.
-// Fora do if, ela não existe, por isso ocorre erro ao tentar acessá-la.
-//O codigo foi corrigido
+        if (x > 5) {
+            int y = 20;
+            System.out.println("x dentro do if: " + x);
+            System.out.println("y dentro do if: " + y);
+        }
+
+        System.out.println("x fora do if: " + x);
+        // System.out.println(y);
+    }
+}
+// Alterar b não muda a, porque tipos primitivos são passados por valor.
+// Isso significa que b recebe uma cópia do valor de a.
+// Quando b muda, apenas essa cópia muda, e o valor original de a fica a msm coisa .
