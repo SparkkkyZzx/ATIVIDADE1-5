@@ -1,15 +1,24 @@
 public class Main {
     public static void main(String[] args) {
-        carro c1 = new carro("Fiat", "Uno", 2020);
-        carro c2 = c1;
-        c2.setModelo("Palio");
-        System.out.println(c1.getModelo());
-        System.out.println(c2.getModelo());
 
+        carro meuCarro = new carro("VW", "Gol", 2015);
+
+        trocarModelo(meuCarro);
+
+        System.out.println(meuCarro.getModelo());
+    }
+
+    public static void trocarModelo(carro c) {
+        c.setModelo("Fusca");
     }
 }
-//a) palio e palio
-//b) Alterar c2 mudou c1 porque ambos apontam para o mesmo objeto na memória.
-//// c1 e c2 não são objetos diferentes, eles são referências para o mesmo objeto.
-//// Portanto, qualquer alteração feita por uma referência afeta o mesmo objeto.
-//Nao entendi a letra c
+// fusca
+//// A mudança feita dentro do método trocarModelo afetou o objeto original
+//// porque estamos passando uma referência ao objeto, e não uma cópia.
+//// O parâmetro c aponta para o mesmo objeto que meuCarro.
+//// Portanto, ao alterar c, estamos modificando o mesmo objeto na memória.
+
+//STACK:
+//meuCarro ─┐
+//          ├──→ HEAP: Carro ("Fusca")
+//c ────────┘
